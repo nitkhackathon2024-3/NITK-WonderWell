@@ -8,11 +8,10 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i8;
-import 'package:flutter/material.dart' as _i9;
-import 'package:wisdom_well/applications/trees/trees_bloc.dart' as _i10;
-import 'package:wisdom_well/core/data/models/user_model.dart' as _i11;
-import 'package:wisdom_well/domain/knowledge_trees/entities/node.dart' as _i12;
+import 'package:auto_route/auto_route.dart' as _i7;
+import 'package:flutter/material.dart' as _i8;
+import 'package:wisdom_well/applications/trees/trees_bloc.dart' as _i9;
+import 'package:wisdom_well/core/data/models/user_model.dart' as _i10;
 import 'package:wisdom_well/presentation/account/pages/home_page.dart' as _i2;
 import 'package:wisdom_well/presentation/account/pages/login_page.dart' as _i4;
 import 'package:wisdom_well/presentation/account/pages/profile_page.dart'
@@ -23,16 +22,14 @@ import 'package:wisdom_well/presentation/knowledge_trees/pages/create_tree_page.
     as _i1;
 import 'package:wisdom_well/presentation/knowledge_trees/pages/list_tress_page.dart'
     as _i3;
-import 'package:wisdom_well/presentation/knowledge_trees/pages/tree_page.dart'
-    as _i7;
 
 /// generated route for
 /// [_i1.CreateTreePage]
-class CreateTreeRoute extends _i8.PageRouteInfo<CreateTreeRouteArgs> {
+class CreateTreeRoute extends _i7.PageRouteInfo<CreateTreeRouteArgs> {
   CreateTreeRoute({
-    _i9.Key? key,
-    required _i10.TreesBloc treesBloc,
-    List<_i8.PageRouteInfo>? children,
+    _i8.Key? key,
+    required _i9.TreesBloc treesBloc,
+    List<_i7.PageRouteInfo>? children,
   }) : super(
           CreateTreeRoute.name,
           args: CreateTreeRouteArgs(
@@ -44,7 +41,7 @@ class CreateTreeRoute extends _i8.PageRouteInfo<CreateTreeRouteArgs> {
 
   static const String name = 'CreateTreeRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<CreateTreeRouteArgs>();
@@ -62,9 +59,9 @@ class CreateTreeRouteArgs {
     required this.treesBloc,
   });
 
-  final _i9.Key? key;
+  final _i8.Key? key;
 
-  final _i10.TreesBloc treesBloc;
+  final _i9.TreesBloc treesBloc;
 
   @override
   String toString() {
@@ -74,8 +71,8 @@ class CreateTreeRouteArgs {
 
 /// generated route for
 /// [_i2.HomePage]
-class HomeRoute extends _i8.PageRouteInfo<void> {
-  const HomeRoute({List<_i8.PageRouteInfo>? children})
+class HomeRoute extends _i7.PageRouteInfo<void> {
+  const HomeRoute({List<_i7.PageRouteInfo>? children})
       : super(
           HomeRoute.name,
           initialChildren: children,
@@ -83,7 +80,7 @@ class HomeRoute extends _i8.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       return const _i2.HomePage();
@@ -93,8 +90,8 @@ class HomeRoute extends _i8.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.ListTressPage]
-class ListTressRoute extends _i8.PageRouteInfo<void> {
-  const ListTressRoute({List<_i8.PageRouteInfo>? children})
+class ListTressRoute extends _i7.PageRouteInfo<void> {
+  const ListTressRoute({List<_i7.PageRouteInfo>? children})
       : super(
           ListTressRoute.name,
           initialChildren: children,
@@ -102,7 +99,7 @@ class ListTressRoute extends _i8.PageRouteInfo<void> {
 
   static const String name = 'ListTressRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       return const _i3.ListTressPage();
@@ -112,8 +109,8 @@ class ListTressRoute extends _i8.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.LoginPage]
-class LoginRoute extends _i8.PageRouteInfo<void> {
-  const LoginRoute({List<_i8.PageRouteInfo>? children})
+class LoginRoute extends _i7.PageRouteInfo<void> {
+  const LoginRoute({List<_i7.PageRouteInfo>? children})
       : super(
           LoginRoute.name,
           initialChildren: children,
@@ -121,7 +118,7 @@ class LoginRoute extends _i8.PageRouteInfo<void> {
 
   static const String name = 'LoginRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       return const _i4.LoginPage();
@@ -131,11 +128,11 @@ class LoginRoute extends _i8.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.ProfilePage]
-class ProfileRoute extends _i8.PageRouteInfo<ProfileRouteArgs> {
+class ProfileRoute extends _i7.PageRouteInfo<ProfileRouteArgs> {
   ProfileRoute({
-    _i9.Key? key,
-    required _i11.UserModel userModel,
-    List<_i8.PageRouteInfo>? children,
+    _i8.Key? key,
+    required _i10.UserModel userModel,
+    List<_i7.PageRouteInfo>? children,
   }) : super(
           ProfileRoute.name,
           args: ProfileRouteArgs(
@@ -147,7 +144,7 @@ class ProfileRoute extends _i8.PageRouteInfo<ProfileRouteArgs> {
 
   static const String name = 'ProfileRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<ProfileRouteArgs>();
@@ -165,9 +162,9 @@ class ProfileRouteArgs {
     required this.userModel,
   });
 
-  final _i9.Key? key;
+  final _i8.Key? key;
 
-  final _i11.UserModel userModel;
+  final _i10.UserModel userModel;
 
   @override
   String toString() {
@@ -177,8 +174,8 @@ class ProfileRouteArgs {
 
 /// generated route for
 /// [_i6.RegisterPage]
-class RegisterRoute extends _i8.PageRouteInfo<void> {
-  const RegisterRoute({List<_i8.PageRouteInfo>? children})
+class RegisterRoute extends _i7.PageRouteInfo<void> {
+  const RegisterRoute({List<_i7.PageRouteInfo>? children})
       : super(
           RegisterRoute.name,
           initialChildren: children,
@@ -186,56 +183,10 @@ class RegisterRoute extends _i8.PageRouteInfo<void> {
 
   static const String name = 'RegisterRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       return const _i6.RegisterPage();
     },
   );
-}
-
-/// generated route for
-/// [_i7.TreeViewPage]
-class TreeViewRoute extends _i8.PageRouteInfo<TreeViewRouteArgs> {
-  TreeViewRoute({
-    _i9.Key? key,
-    required _i12.Node root,
-    List<_i8.PageRouteInfo>? children,
-  }) : super(
-          TreeViewRoute.name,
-          args: TreeViewRouteArgs(
-            key: key,
-            root: root,
-          ),
-          initialChildren: children,
-        );
-
-  static const String name = 'TreeViewRoute';
-
-  static _i8.PageInfo page = _i8.PageInfo(
-    name,
-    builder: (data) {
-      final args = data.argsAs<TreeViewRouteArgs>();
-      return _i7.TreeViewPage(
-        key: args.key,
-        root: args.root,
-      );
-    },
-  );
-}
-
-class TreeViewRouteArgs {
-  const TreeViewRouteArgs({
-    this.key,
-    required this.root,
-  });
-
-  final _i9.Key? key;
-
-  final _i12.Node root;
-
-  @override
-  String toString() {
-    return 'TreeViewRouteArgs{key: $key, root: $root}';
-  }
 }

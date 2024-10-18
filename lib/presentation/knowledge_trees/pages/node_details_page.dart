@@ -21,38 +21,40 @@ class NodeDetailsPage extends StatelessWidget {
         title: Text(label),  // Display the node label in the app bar
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Key Points",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            ...keyPoints.map((point) => Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4.0),
-                  child: Text("• $point"),
-                )),
-            SizedBox(height: 16),
-            Text(
-              "Summary",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: Text(summary),
-            ),
-            SizedBox(height: 16),
-            Text(
-              "Subtopics",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            ...subtopics.map((subtopic) => Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4.0),
-                  child: Text("• $subtopic"),
-                )),
-          ],
+      body: SingleChildScrollView( // Wrap the body with SingleChildScrollView
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Key Points",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              ...keyPoints.map((point) => Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 4.0),
+                    child: Text("• $point"),
+                  )),
+              SizedBox(height: 16),
+              Text(
+                "Summary",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: Text(summary),
+              ),
+              SizedBox(height: 16),
+              Text(
+                "Subtopics",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              ...subtopics.map((subtopic) => Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 4.0),
+                    child: Text("• $subtopic"),
+                  )),
+            ],
+          ),
         ),
       ),
     );

@@ -493,7 +493,7 @@ mixin _$TreesState {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(List<Tree> trees) loaded,
-    required TResult Function() updatedTree,
+    required TResult Function() updatedTrees,
     required TResult Function(AppFailure failure) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -501,7 +501,7 @@ mixin _$TreesState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(List<Tree> trees)? loaded,
-    TResult? Function()? updatedTree,
+    TResult? Function()? updatedTrees,
     TResult? Function(AppFailure failure)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -509,7 +509,7 @@ mixin _$TreesState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(List<Tree> trees)? loaded,
-    TResult Function()? updatedTree,
+    TResult Function()? updatedTrees,
     TResult Function(AppFailure failure)? error,
     required TResult orElse(),
   }) =>
@@ -518,7 +518,7 @@ mixin _$TreesState {
   TResult map<TResult extends Object?>({
     required TResult Function(TreesLoading value) loading,
     required TResult Function(LoadedTress value) loaded,
-    required TResult Function(UpdatedTrees value) updatedTree,
+    required TResult Function(UpdatedTrees value) updatedTrees,
     required TResult Function(TreesError value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -526,7 +526,7 @@ mixin _$TreesState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TreesLoading value)? loading,
     TResult? Function(LoadedTress value)? loaded,
-    TResult? Function(UpdatedTrees value)? updatedTree,
+    TResult? Function(UpdatedTrees value)? updatedTrees,
     TResult? Function(TreesError value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -534,7 +534,7 @@ mixin _$TreesState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TreesLoading value)? loading,
     TResult Function(LoadedTress value)? loaded,
-    TResult Function(UpdatedTrees value)? updatedTree,
+    TResult Function(UpdatedTrees value)? updatedTrees,
     TResult Function(TreesError value)? error,
     required TResult orElse(),
   }) =>
@@ -605,7 +605,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(List<Tree> trees) loaded,
-    required TResult Function() updatedTree,
+    required TResult Function() updatedTrees,
     required TResult Function(AppFailure failure) error,
   }) {
     return loading();
@@ -616,7 +616,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(List<Tree> trees)? loaded,
-    TResult? Function()? updatedTree,
+    TResult? Function()? updatedTrees,
     TResult? Function(AppFailure failure)? error,
   }) {
     return loading?.call();
@@ -627,7 +627,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(List<Tree> trees)? loaded,
-    TResult Function()? updatedTree,
+    TResult Function()? updatedTrees,
     TResult Function(AppFailure failure)? error,
     required TResult orElse(),
   }) {
@@ -642,7 +642,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult map<TResult extends Object?>({
     required TResult Function(TreesLoading value) loading,
     required TResult Function(LoadedTress value) loaded,
-    required TResult Function(UpdatedTrees value) updatedTree,
+    required TResult Function(UpdatedTrees value) updatedTrees,
     required TResult Function(TreesError value) error,
   }) {
     return loading(this);
@@ -653,7 +653,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TreesLoading value)? loading,
     TResult? Function(LoadedTress value)? loaded,
-    TResult? Function(UpdatedTrees value)? updatedTree,
+    TResult? Function(UpdatedTrees value)? updatedTrees,
     TResult? Function(TreesError value)? error,
   }) {
     return loading?.call(this);
@@ -664,7 +664,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TreesLoading value)? loading,
     TResult Function(LoadedTress value)? loaded,
-    TResult Function(UpdatedTrees value)? updatedTree,
+    TResult Function(UpdatedTrees value)? updatedTrees,
     TResult Function(TreesError value)? error,
     required TResult orElse(),
   }) {
@@ -755,7 +755,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(List<Tree> trees) loaded,
-    required TResult Function() updatedTree,
+    required TResult Function() updatedTrees,
     required TResult Function(AppFailure failure) error,
   }) {
     return loaded(trees);
@@ -766,7 +766,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(List<Tree> trees)? loaded,
-    TResult? Function()? updatedTree,
+    TResult? Function()? updatedTrees,
     TResult? Function(AppFailure failure)? error,
   }) {
     return loaded?.call(trees);
@@ -777,7 +777,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(List<Tree> trees)? loaded,
-    TResult Function()? updatedTree,
+    TResult Function()? updatedTrees,
     TResult Function(AppFailure failure)? error,
     required TResult orElse(),
   }) {
@@ -792,7 +792,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult map<TResult extends Object?>({
     required TResult Function(TreesLoading value) loading,
     required TResult Function(LoadedTress value) loaded,
-    required TResult Function(UpdatedTrees value) updatedTree,
+    required TResult Function(UpdatedTrees value) updatedTrees,
     required TResult Function(TreesError value) error,
   }) {
     return loaded(this);
@@ -803,7 +803,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TreesLoading value)? loading,
     TResult? Function(LoadedTress value)? loaded,
-    TResult? Function(UpdatedTrees value)? updatedTree,
+    TResult? Function(UpdatedTrees value)? updatedTrees,
     TResult? Function(TreesError value)? error,
   }) {
     return loaded?.call(this);
@@ -814,7 +814,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TreesLoading value)? loading,
     TResult Function(LoadedTress value)? loaded,
-    TResult Function(UpdatedTrees value)? updatedTree,
+    TResult Function(UpdatedTrees value)? updatedTrees,
     TResult Function(TreesError value)? error,
     required TResult orElse(),
   }) {
@@ -863,7 +863,7 @@ class _$UpdatedTreesImpl implements UpdatedTrees {
 
   @override
   String toString() {
-    return 'TreesState.updatedTree()';
+    return 'TreesState.updatedTrees()';
   }
 
   @override
@@ -880,10 +880,10 @@ class _$UpdatedTreesImpl implements UpdatedTrees {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(List<Tree> trees) loaded,
-    required TResult Function() updatedTree,
+    required TResult Function() updatedTrees,
     required TResult Function(AppFailure failure) error,
   }) {
-    return updatedTree();
+    return updatedTrees();
   }
 
   @override
@@ -891,10 +891,10 @@ class _$UpdatedTreesImpl implements UpdatedTrees {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(List<Tree> trees)? loaded,
-    TResult? Function()? updatedTree,
+    TResult? Function()? updatedTrees,
     TResult? Function(AppFailure failure)? error,
   }) {
-    return updatedTree?.call();
+    return updatedTrees?.call();
   }
 
   @override
@@ -902,12 +902,12 @@ class _$UpdatedTreesImpl implements UpdatedTrees {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(List<Tree> trees)? loaded,
-    TResult Function()? updatedTree,
+    TResult Function()? updatedTrees,
     TResult Function(AppFailure failure)? error,
     required TResult orElse(),
   }) {
-    if (updatedTree != null) {
-      return updatedTree();
+    if (updatedTrees != null) {
+      return updatedTrees();
     }
     return orElse();
   }
@@ -917,10 +917,10 @@ class _$UpdatedTreesImpl implements UpdatedTrees {
   TResult map<TResult extends Object?>({
     required TResult Function(TreesLoading value) loading,
     required TResult Function(LoadedTress value) loaded,
-    required TResult Function(UpdatedTrees value) updatedTree,
+    required TResult Function(UpdatedTrees value) updatedTrees,
     required TResult Function(TreesError value) error,
   }) {
-    return updatedTree(this);
+    return updatedTrees(this);
   }
 
   @override
@@ -928,10 +928,10 @@ class _$UpdatedTreesImpl implements UpdatedTrees {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TreesLoading value)? loading,
     TResult? Function(LoadedTress value)? loaded,
-    TResult? Function(UpdatedTrees value)? updatedTree,
+    TResult? Function(UpdatedTrees value)? updatedTrees,
     TResult? Function(TreesError value)? error,
   }) {
-    return updatedTree?.call(this);
+    return updatedTrees?.call(this);
   }
 
   @override
@@ -939,12 +939,12 @@ class _$UpdatedTreesImpl implements UpdatedTrees {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TreesLoading value)? loading,
     TResult Function(LoadedTress value)? loaded,
-    TResult Function(UpdatedTrees value)? updatedTree,
+    TResult Function(UpdatedTrees value)? updatedTrees,
     TResult Function(TreesError value)? error,
     required TResult orElse(),
   }) {
-    if (updatedTree != null) {
-      return updatedTree(this);
+    if (updatedTrees != null) {
+      return updatedTrees(this);
     }
     return orElse();
   }
@@ -1024,7 +1024,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(List<Tree> trees) loaded,
-    required TResult Function() updatedTree,
+    required TResult Function() updatedTrees,
     required TResult Function(AppFailure failure) error,
   }) {
     return error(failure);
@@ -1035,7 +1035,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(List<Tree> trees)? loaded,
-    TResult? Function()? updatedTree,
+    TResult? Function()? updatedTrees,
     TResult? Function(AppFailure failure)? error,
   }) {
     return error?.call(failure);
@@ -1046,7 +1046,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(List<Tree> trees)? loaded,
-    TResult Function()? updatedTree,
+    TResult Function()? updatedTrees,
     TResult Function(AppFailure failure)? error,
     required TResult orElse(),
   }) {
@@ -1061,7 +1061,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult map<TResult extends Object?>({
     required TResult Function(TreesLoading value) loading,
     required TResult Function(LoadedTress value) loaded,
-    required TResult Function(UpdatedTrees value) updatedTree,
+    required TResult Function(UpdatedTrees value) updatedTrees,
     required TResult Function(TreesError value) error,
   }) {
     return error(this);
@@ -1072,7 +1072,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TreesLoading value)? loading,
     TResult? Function(LoadedTress value)? loaded,
-    TResult? Function(UpdatedTrees value)? updatedTree,
+    TResult? Function(UpdatedTrees value)? updatedTrees,
     TResult? Function(TreesError value)? error,
   }) {
     return error?.call(this);
@@ -1083,7 +1083,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TreesLoading value)? loading,
     TResult Function(LoadedTress value)? loaded,
-    TResult Function(UpdatedTrees value)? updatedTree,
+    TResult Function(UpdatedTrees value)? updatedTrees,
     TResult Function(TreesError value)? error,
     required TResult orElse(),
   }) {

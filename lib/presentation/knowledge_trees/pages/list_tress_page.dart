@@ -8,6 +8,7 @@ import 'package:wisdom_well/core/routes/auto_router.gr.dart';
 import 'package:wisdom_well/core/services/service_locator.dart';
 import 'package:wisdom_well/domain/knowledge_trees/entities/tree.dart';
 import 'package:wisdom_well/domain/knowledge_trees/entities/node.dart' as my;
+import 'package:wisdom_well/presentation/knowledge_trees/pages/tree_page.dart';
 
 @RoutePage()
 class ListTressPage extends StatefulWidget {
@@ -207,9 +208,9 @@ class _ListTressPageState extends State<ListTressPage> {
 
                               if (rootNode != null) {
                                 // Navigate to the TreeViewPage with the fetched root node
-                                AutoRouter.of(context).push(
-                                  TreeViewRoute(root: rootNode),
-                                );
+                                Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => TreeViewPage(treeId: tree.id, label: tree.name),
+                                ));
                               } else {
                                 // Show an error message if root node is not found
                                 ScaffoldMessenger.of(context).showSnackBar(
