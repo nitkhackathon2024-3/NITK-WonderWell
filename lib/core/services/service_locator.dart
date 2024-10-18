@@ -51,7 +51,13 @@ class ServiceLocator {
 
     // Bloc
     sl.registerFactory(() => AuthBloc());
-    sl.registerFactory(() => TreesBloc(fetchTrees: sl()));
+    sl.registerFactory(
+      () => TreesBloc(
+        fetchTrees: sl(),
+        createTree: sl(),
+        deleteTree: sl(),
+      ),
+    );
 
     //
     sl.registerSingleton(Authenticator());

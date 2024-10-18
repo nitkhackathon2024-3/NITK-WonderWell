@@ -19,32 +19,44 @@ mixin _$TreesEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchTrees,
+    required TResult Function(TreeTemplate treeTemplate) createTree,
+    required TResult Function(Tree tree) deleteTree,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchTrees,
+    TResult? Function(TreeTemplate treeTemplate)? createTree,
+    TResult? Function(Tree tree)? deleteTree,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchTrees,
+    TResult Function(TreeTemplate treeTemplate)? createTree,
+    TResult Function(Tree tree)? deleteTree,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchTrees value) fetchTrees,
+    required TResult Function(_CreateTree value) createTree,
+    required TResult Function(_DeleteTree value) deleteTree,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchTrees value)? fetchTrees,
+    TResult? Function(_CreateTree value)? createTree,
+    TResult? Function(_DeleteTree value)? deleteTree,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchTrees value)? fetchTrees,
+    TResult Function(_CreateTree value)? createTree,
+    TResult Function(_DeleteTree value)? deleteTree,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -113,6 +125,8 @@ class _$FetchTreesImpl implements _FetchTrees {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchTrees,
+    required TResult Function(TreeTemplate treeTemplate) createTree,
+    required TResult Function(Tree tree) deleteTree,
   }) {
     return fetchTrees();
   }
@@ -121,6 +135,8 @@ class _$FetchTreesImpl implements _FetchTrees {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchTrees,
+    TResult? Function(TreeTemplate treeTemplate)? createTree,
+    TResult? Function(Tree tree)? deleteTree,
   }) {
     return fetchTrees?.call();
   }
@@ -129,6 +145,8 @@ class _$FetchTreesImpl implements _FetchTrees {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchTrees,
+    TResult Function(TreeTemplate treeTemplate)? createTree,
+    TResult Function(Tree tree)? deleteTree,
     required TResult orElse(),
   }) {
     if (fetchTrees != null) {
@@ -141,6 +159,8 @@ class _$FetchTreesImpl implements _FetchTrees {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchTrees value) fetchTrees,
+    required TResult Function(_CreateTree value) createTree,
+    required TResult Function(_DeleteTree value) deleteTree,
   }) {
     return fetchTrees(this);
   }
@@ -149,6 +169,8 @@ class _$FetchTreesImpl implements _FetchTrees {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchTrees value)? fetchTrees,
+    TResult? Function(_CreateTree value)? createTree,
+    TResult? Function(_DeleteTree value)? deleteTree,
   }) {
     return fetchTrees?.call(this);
   }
@@ -157,6 +179,8 @@ class _$FetchTreesImpl implements _FetchTrees {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchTrees value)? fetchTrees,
+    TResult Function(_CreateTree value)? createTree,
+    TResult Function(_DeleteTree value)? deleteTree,
     required TResult orElse(),
   }) {
     if (fetchTrees != null) {
@@ -171,11 +195,305 @@ abstract class _FetchTrees implements TreesEvent {
 }
 
 /// @nodoc
+abstract class _$$CreateTreeImplCopyWith<$Res> {
+  factory _$$CreateTreeImplCopyWith(
+          _$CreateTreeImpl value, $Res Function(_$CreateTreeImpl) then) =
+      __$$CreateTreeImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({TreeTemplate treeTemplate});
+}
+
+/// @nodoc
+class __$$CreateTreeImplCopyWithImpl<$Res>
+    extends _$TreesEventCopyWithImpl<$Res, _$CreateTreeImpl>
+    implements _$$CreateTreeImplCopyWith<$Res> {
+  __$$CreateTreeImplCopyWithImpl(
+      _$CreateTreeImpl _value, $Res Function(_$CreateTreeImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of TreesEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? treeTemplate = null,
+  }) {
+    return _then(_$CreateTreeImpl(
+      null == treeTemplate
+          ? _value.treeTemplate
+          : treeTemplate // ignore: cast_nullable_to_non_nullable
+              as TreeTemplate,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CreateTreeImpl implements _CreateTree {
+  const _$CreateTreeImpl(this.treeTemplate);
+
+  @override
+  final TreeTemplate treeTemplate;
+
+  @override
+  String toString() {
+    return 'TreesEvent.createTree(treeTemplate: $treeTemplate)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateTreeImpl &&
+            (identical(other.treeTemplate, treeTemplate) ||
+                other.treeTemplate == treeTemplate));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, treeTemplate);
+
+  /// Create a copy of TreesEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateTreeImplCopyWith<_$CreateTreeImpl> get copyWith =>
+      __$$CreateTreeImplCopyWithImpl<_$CreateTreeImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchTrees,
+    required TResult Function(TreeTemplate treeTemplate) createTree,
+    required TResult Function(Tree tree) deleteTree,
+  }) {
+    return createTree(treeTemplate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchTrees,
+    TResult? Function(TreeTemplate treeTemplate)? createTree,
+    TResult? Function(Tree tree)? deleteTree,
+  }) {
+    return createTree?.call(treeTemplate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchTrees,
+    TResult Function(TreeTemplate treeTemplate)? createTree,
+    TResult Function(Tree tree)? deleteTree,
+    required TResult orElse(),
+  }) {
+    if (createTree != null) {
+      return createTree(treeTemplate);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchTrees value) fetchTrees,
+    required TResult Function(_CreateTree value) createTree,
+    required TResult Function(_DeleteTree value) deleteTree,
+  }) {
+    return createTree(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchTrees value)? fetchTrees,
+    TResult? Function(_CreateTree value)? createTree,
+    TResult? Function(_DeleteTree value)? deleteTree,
+  }) {
+    return createTree?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchTrees value)? fetchTrees,
+    TResult Function(_CreateTree value)? createTree,
+    TResult Function(_DeleteTree value)? deleteTree,
+    required TResult orElse(),
+  }) {
+    if (createTree != null) {
+      return createTree(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CreateTree implements TreesEvent {
+  const factory _CreateTree(final TreeTemplate treeTemplate) = _$CreateTreeImpl;
+
+  TreeTemplate get treeTemplate;
+
+  /// Create a copy of TreesEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CreateTreeImplCopyWith<_$CreateTreeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DeleteTreeImplCopyWith<$Res> {
+  factory _$$DeleteTreeImplCopyWith(
+          _$DeleteTreeImpl value, $Res Function(_$DeleteTreeImpl) then) =
+      __$$DeleteTreeImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Tree tree});
+}
+
+/// @nodoc
+class __$$DeleteTreeImplCopyWithImpl<$Res>
+    extends _$TreesEventCopyWithImpl<$Res, _$DeleteTreeImpl>
+    implements _$$DeleteTreeImplCopyWith<$Res> {
+  __$$DeleteTreeImplCopyWithImpl(
+      _$DeleteTreeImpl _value, $Res Function(_$DeleteTreeImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of TreesEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? tree = null,
+  }) {
+    return _then(_$DeleteTreeImpl(
+      null == tree
+          ? _value.tree
+          : tree // ignore: cast_nullable_to_non_nullable
+              as Tree,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DeleteTreeImpl implements _DeleteTree {
+  const _$DeleteTreeImpl(this.tree);
+
+  @override
+  final Tree tree;
+
+  @override
+  String toString() {
+    return 'TreesEvent.deleteTree(tree: $tree)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteTreeImpl &&
+            (identical(other.tree, tree) || other.tree == tree));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, tree);
+
+  /// Create a copy of TreesEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteTreeImplCopyWith<_$DeleteTreeImpl> get copyWith =>
+      __$$DeleteTreeImplCopyWithImpl<_$DeleteTreeImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchTrees,
+    required TResult Function(TreeTemplate treeTemplate) createTree,
+    required TResult Function(Tree tree) deleteTree,
+  }) {
+    return deleteTree(tree);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchTrees,
+    TResult? Function(TreeTemplate treeTemplate)? createTree,
+    TResult? Function(Tree tree)? deleteTree,
+  }) {
+    return deleteTree?.call(tree);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchTrees,
+    TResult Function(TreeTemplate treeTemplate)? createTree,
+    TResult Function(Tree tree)? deleteTree,
+    required TResult orElse(),
+  }) {
+    if (deleteTree != null) {
+      return deleteTree(tree);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchTrees value) fetchTrees,
+    required TResult Function(_CreateTree value) createTree,
+    required TResult Function(_DeleteTree value) deleteTree,
+  }) {
+    return deleteTree(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchTrees value)? fetchTrees,
+    TResult? Function(_CreateTree value)? createTree,
+    TResult? Function(_DeleteTree value)? deleteTree,
+  }) {
+    return deleteTree?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchTrees value)? fetchTrees,
+    TResult Function(_CreateTree value)? createTree,
+    TResult Function(_DeleteTree value)? deleteTree,
+    required TResult orElse(),
+  }) {
+    if (deleteTree != null) {
+      return deleteTree(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteTree implements TreesEvent {
+  const factory _DeleteTree(final Tree tree) = _$DeleteTreeImpl;
+
+  Tree get tree;
+
+  /// Create a copy of TreesEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DeleteTreeImplCopyWith<_$DeleteTreeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$TreesState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(List<Tree> trees) loaded,
+    required TResult Function() updatedTree,
     required TResult Function(AppFailure failure) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -183,6 +501,7 @@ mixin _$TreesState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(List<Tree> trees)? loaded,
+    TResult? Function()? updatedTree,
     TResult? Function(AppFailure failure)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -190,6 +509,7 @@ mixin _$TreesState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(List<Tree> trees)? loaded,
+    TResult Function()? updatedTree,
     TResult Function(AppFailure failure)? error,
     required TResult orElse(),
   }) =>
@@ -198,6 +518,7 @@ mixin _$TreesState {
   TResult map<TResult extends Object?>({
     required TResult Function(TreesLoading value) loading,
     required TResult Function(LoadedTress value) loaded,
+    required TResult Function(UpdatedTrees value) updatedTree,
     required TResult Function(TreesError value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -205,6 +526,7 @@ mixin _$TreesState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TreesLoading value)? loading,
     TResult? Function(LoadedTress value)? loaded,
+    TResult? Function(UpdatedTrees value)? updatedTree,
     TResult? Function(TreesError value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -212,6 +534,7 @@ mixin _$TreesState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TreesLoading value)? loading,
     TResult Function(LoadedTress value)? loaded,
+    TResult Function(UpdatedTrees value)? updatedTree,
     TResult Function(TreesError value)? error,
     required TResult orElse(),
   }) =>
@@ -282,6 +605,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(List<Tree> trees) loaded,
+    required TResult Function() updatedTree,
     required TResult Function(AppFailure failure) error,
   }) {
     return loading();
@@ -292,6 +616,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(List<Tree> trees)? loaded,
+    TResult? Function()? updatedTree,
     TResult? Function(AppFailure failure)? error,
   }) {
     return loading?.call();
@@ -302,6 +627,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(List<Tree> trees)? loaded,
+    TResult Function()? updatedTree,
     TResult Function(AppFailure failure)? error,
     required TResult orElse(),
   }) {
@@ -316,6 +642,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult map<TResult extends Object?>({
     required TResult Function(TreesLoading value) loading,
     required TResult Function(LoadedTress value) loaded,
+    required TResult Function(UpdatedTrees value) updatedTree,
     required TResult Function(TreesError value) error,
   }) {
     return loading(this);
@@ -326,6 +653,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TreesLoading value)? loading,
     TResult? Function(LoadedTress value)? loaded,
+    TResult? Function(UpdatedTrees value)? updatedTree,
     TResult? Function(TreesError value)? error,
   }) {
     return loading?.call(this);
@@ -336,6 +664,7 @@ class _$TreesLoadingImpl implements TreesLoading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TreesLoading value)? loading,
     TResult Function(LoadedTress value)? loaded,
+    TResult Function(UpdatedTrees value)? updatedTree,
     TResult Function(TreesError value)? error,
     required TResult orElse(),
   }) {
@@ -426,6 +755,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(List<Tree> trees) loaded,
+    required TResult Function() updatedTree,
     required TResult Function(AppFailure failure) error,
   }) {
     return loaded(trees);
@@ -436,6 +766,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(List<Tree> trees)? loaded,
+    TResult? Function()? updatedTree,
     TResult? Function(AppFailure failure)? error,
   }) {
     return loaded?.call(trees);
@@ -446,6 +777,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(List<Tree> trees)? loaded,
+    TResult Function()? updatedTree,
     TResult Function(AppFailure failure)? error,
     required TResult orElse(),
   }) {
@@ -460,6 +792,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult map<TResult extends Object?>({
     required TResult Function(TreesLoading value) loading,
     required TResult Function(LoadedTress value) loaded,
+    required TResult Function(UpdatedTrees value) updatedTree,
     required TResult Function(TreesError value) error,
   }) {
     return loaded(this);
@@ -470,6 +803,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TreesLoading value)? loading,
     TResult? Function(LoadedTress value)? loaded,
+    TResult? Function(UpdatedTrees value)? updatedTree,
     TResult? Function(TreesError value)? error,
   }) {
     return loaded?.call(this);
@@ -480,6 +814,7 @@ class _$LoadedTressImpl implements LoadedTress {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TreesLoading value)? loading,
     TResult Function(LoadedTress value)? loaded,
+    TResult Function(UpdatedTrees value)? updatedTree,
     TResult Function(TreesError value)? error,
     required TResult orElse(),
   }) {
@@ -500,6 +835,123 @@ abstract class LoadedTress implements TreesState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedTressImplCopyWith<_$LoadedTressImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdatedTreesImplCopyWith<$Res> {
+  factory _$$UpdatedTreesImplCopyWith(
+          _$UpdatedTreesImpl value, $Res Function(_$UpdatedTreesImpl) then) =
+      __$$UpdatedTreesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdatedTreesImplCopyWithImpl<$Res>
+    extends _$TreesStateCopyWithImpl<$Res, _$UpdatedTreesImpl>
+    implements _$$UpdatedTreesImplCopyWith<$Res> {
+  __$$UpdatedTreesImplCopyWithImpl(
+      _$UpdatedTreesImpl _value, $Res Function(_$UpdatedTreesImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of TreesState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$UpdatedTreesImpl implements UpdatedTrees {
+  const _$UpdatedTreesImpl();
+
+  @override
+  String toString() {
+    return 'TreesState.updatedTree()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdatedTreesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function(List<Tree> trees) loaded,
+    required TResult Function() updatedTree,
+    required TResult Function(AppFailure failure) error,
+  }) {
+    return updatedTree();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loading,
+    TResult? Function(List<Tree> trees)? loaded,
+    TResult? Function()? updatedTree,
+    TResult? Function(AppFailure failure)? error,
+  }) {
+    return updatedTree?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function(List<Tree> trees)? loaded,
+    TResult Function()? updatedTree,
+    TResult Function(AppFailure failure)? error,
+    required TResult orElse(),
+  }) {
+    if (updatedTree != null) {
+      return updatedTree();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(TreesLoading value) loading,
+    required TResult Function(LoadedTress value) loaded,
+    required TResult Function(UpdatedTrees value) updatedTree,
+    required TResult Function(TreesError value) error,
+  }) {
+    return updatedTree(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(TreesLoading value)? loading,
+    TResult? Function(LoadedTress value)? loaded,
+    TResult? Function(UpdatedTrees value)? updatedTree,
+    TResult? Function(TreesError value)? error,
+  }) {
+    return updatedTree?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TreesLoading value)? loading,
+    TResult Function(LoadedTress value)? loaded,
+    TResult Function(UpdatedTrees value)? updatedTree,
+    TResult Function(TreesError value)? error,
+    required TResult orElse(),
+  }) {
+    if (updatedTree != null) {
+      return updatedTree(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdatedTrees implements TreesState {
+  const factory UpdatedTrees() = _$UpdatedTreesImpl;
 }
 
 /// @nodoc
@@ -572,6 +1024,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(List<Tree> trees) loaded,
+    required TResult Function() updatedTree,
     required TResult Function(AppFailure failure) error,
   }) {
     return error(failure);
@@ -582,6 +1035,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(List<Tree> trees)? loaded,
+    TResult? Function()? updatedTree,
     TResult? Function(AppFailure failure)? error,
   }) {
     return error?.call(failure);
@@ -592,6 +1046,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(List<Tree> trees)? loaded,
+    TResult Function()? updatedTree,
     TResult Function(AppFailure failure)? error,
     required TResult orElse(),
   }) {
@@ -606,6 +1061,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult map<TResult extends Object?>({
     required TResult Function(TreesLoading value) loading,
     required TResult Function(LoadedTress value) loaded,
+    required TResult Function(UpdatedTrees value) updatedTree,
     required TResult Function(TreesError value) error,
   }) {
     return error(this);
@@ -616,6 +1072,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TreesLoading value)? loading,
     TResult? Function(LoadedTress value)? loaded,
+    TResult? Function(UpdatedTrees value)? updatedTree,
     TResult? Function(TreesError value)? error,
   }) {
     return error?.call(this);
@@ -626,6 +1083,7 @@ class _$TreesErrorImpl implements TreesError {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TreesLoading value)? loading,
     TResult Function(LoadedTress value)? loaded,
+    TResult Function(UpdatedTrees value)? updatedTree,
     TResult Function(TreesError value)? error,
     required TResult orElse(),
   }) {

@@ -93,9 +93,16 @@ class ListTressPage extends StatelessWidget {
             },
           ),
         ),
-        body: BlocBuilder<TreesBloc, TreesState>(
+        body: BlocConsumer<TreesBloc, TreesState>(
+          listener: (context, state) => switch (state) {
+            UpdatedTrees() =>
+              BlocProvider.of<TreesBloc>(context).add(TreesEvent.fetchTrees()),
+            _ => null,
+          },
           builder: (context, state) => switch (state) {
-            TreesLoading() => Center(child: CircularProgressIndicator()),
+            UpdatedTrees() ||
+            TreesLoading() =>
+              Center(child: CircularProgressIndicator()),
             LoadedTress() => state.trees.isEmpty
                 ? Center(
                     child: Text("Create a tree to start!"),

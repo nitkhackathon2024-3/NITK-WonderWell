@@ -25,16 +25,19 @@ class Tree {
 }
 
 class TreeDetails {
+  final String id;
   final String name;
   final Node root;
 
   TreeDetails({
+    required this.id,
     required this.name,
     required this.root,
   });
 
   factory TreeDetails.fromJson(Map<String, dynamic> json) {
     return TreeDetails(
+      id: json['id'],
       name: json['name'],
       root: Node.fromJson(json['root']),
     );
@@ -42,6 +45,7 @@ class TreeDetails {
 
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'name': name,
       'root': root.toJson(),
     };
