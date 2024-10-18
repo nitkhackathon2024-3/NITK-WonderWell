@@ -1,0 +1,1 @@
+const kAppBarHeight = 64.0;
