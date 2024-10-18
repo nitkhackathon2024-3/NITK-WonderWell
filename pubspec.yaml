@@ -44,6 +44,7 @@ dependencies:
   freezed_annotation: ^2.4.4
   get_it: ^8.0.0
   graphview: ^1.2.0
+  http: ^1.2.2
   internet_connection_checker: ^1.0.0+1
   rate_limiter: ^1.0.0
 

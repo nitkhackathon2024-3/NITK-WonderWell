@@ -1,10 +1,9 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:graphview/GraphView.dart';
-
 import 'package:wisdom_well/domain/knowledge_trees/entities/node.dart' as my;
 
-@RoutePage()
+import 'node_details_page.dart';  // Import the NodeDetailsPage
+
 class TreeViewPage extends StatefulWidget {
   final my.Node root;
   const TreeViewPage({super.key, required this.root});
@@ -19,7 +18,7 @@ class _TreeViewPageState extends State<TreeViewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(""),
+        title: Text("Tree View"),
         centerTitle: true,
       ),
       body: Center(
@@ -37,7 +36,6 @@ class _TreeViewPageState extends State<TreeViewPage> {
               ..strokeWidth = 1
               ..style = PaintingStyle.stroke,
             builder: (Node node) {
-              // I can decide what widget should be shown here based on the id
               var a = node.key?.value as String;
               return rectangleWidget(a);
             },
@@ -48,9 +46,22 @@ class _TreeViewPageState extends State<TreeViewPage> {
   }
 
   Widget rectangleWidget(String a) {
+    final currentNode = nodes[a]!;  // Get the node using its ID
+
     return InkWell(
       onTap: () {
-        debugPrint('clicked');
+        // Navigate to NodeDetailsPage with label, keyPoints, summary, and subtopics using Navigator.push
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => NodeDetailsPage(
+              label: currentNode.label,
+              keyPoints: currentNode.keyPoints,  // Assuming you have keyPoints field in the node
+              summary: currentNode.summary,      // Assuming you have summary field in the node
+              subtopics: currentNode.subtopics,  // Assuming you have subtopics field in the node
+            ),
+          ),
+        );
       },
       child: Container(
         padding: EdgeInsets.all(8),
@@ -61,9 +72,7 @@ class _TreeViewPageState extends State<TreeViewPage> {
           ],
         ),
         child: Text(
-          a == "3"
-              ? "Homeakj dfl;kajdf ;lkajfd;lkaj;dfja;ldjkfl;ajfd;lajf"
-              : nodes[a]!.label,
+          currentNode.label,
           softWrap: true,
         ),
       ),
