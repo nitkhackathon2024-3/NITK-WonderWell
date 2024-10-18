@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "587779278474",
+    "project_id": "wisdomwell-9a7ee",
+    "storage_bucket": "wisdomwell-9a7ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587779278474:android:d23ba7f2f85a12f9a00f73",
+        "android_client_info": {
+          "package_name": "com.wisdomwell.app.wisdom_well"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3tbt1RThk5YGtMdAtYap_CqRMzbWirDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
