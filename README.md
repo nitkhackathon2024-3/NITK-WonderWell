@@ -1,5 +1,9 @@
 # 3.1 Knowledge Distiller App - WonderWell
 
+## Team members
+- Akshat Bharara (231CS110) - 9108920730
+- Nishant A S (231EE138) - 6360219728
+
 A powerful tool designed to help students organize and retrieve study materials more efficiently. The Knowledge Distiller App enables users to upload their notes—whether text, images, or audio—and automatically generates a dynamic knowledge graph. This evolving graph visually represents relationships between different topics and concepts, making study sessions more effective and tailored to individual learning styles.
 
 ---
